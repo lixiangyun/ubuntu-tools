@@ -24,10 +24,9 @@ WORKDIR /opt/bcc/build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=/usr
 RUN make
 RUN make install
-RUN rmdir /opt/bcc
+RUN rm -rf /opt/bcc
 
 WORKDIR /root
-
 ADD ./hold_on.sh hold_on.sh
 RUN chmod u+x hold_on.sh
 CMD hold_on.sh
