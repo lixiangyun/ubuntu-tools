@@ -29,4 +29,5 @@ RUN rm -rf /opt/bcc
 WORKDIR /root
 ADD ./hold_on.sh hold_on.sh
 RUN chmod u+x hold_on.sh
-CMD hold_on.sh
+
+ENTRYPOINT ["/root/hold_on.sh"]
