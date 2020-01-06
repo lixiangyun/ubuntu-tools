@@ -15,6 +15,7 @@ RUN apt-get update
 RUN apt-get -y install bison build-essential cmake flex git libedit-dev libllvm3.7 llvm-3.7-dev libclang-3.7-dev python zlib1g-dev libelf-dev
 
 RUN apt-get -y install luajit luajit-5.1-dev
+RUN apt-get -y install sslscan
 
 WORKDIR /opt
 RUN git clone https://github.com/iovisor/bcc.git
